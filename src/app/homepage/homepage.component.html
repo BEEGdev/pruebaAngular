@@ -1,12 +1,11 @@
-<style>
-.cardContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 2;
-    
-}
-</style>
 <div class="cardContainer">
-    <p>homepage works!</p>
-    <app-card class="card" *ngFor="let info of infoCards" cardTitle="{{info.title}}" path="{{info.path}}" ></app-card>
+  <h1>Aplicaciones</h1>
+  <section>
+    <app-card
+      class="card"
+      *ngFor="let info of infoCards"
+      cardTitle="{{ info.title }}"
+      path="{{ info.path }}"
+    ></app-card>
+  </section>
 </div>

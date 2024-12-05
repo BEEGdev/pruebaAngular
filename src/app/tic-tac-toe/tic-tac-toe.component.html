@@ -1,1 +1,23 @@
-<p>tic-tac-toe works!</p>
+<div class="juego">
+  <h2>Juego del Tres en Raya</h2>
+
+  <!-- Mensajes de ganador o empate -->
+  <div *ngIf="gameOver">
+    <h3 *ngIf="!gameBoard.includes('')">¡Empate!</h3>
+    <h3 *ngIf="gameBoard.includes('')">¡{{ currentPlayer }} ha ganado!</h3>
+  </div>
+
+  <!-- Tablero de 3x3 -->
+  <div class="tablero">
+    <div
+      *ngFor="let cell of gameBoard; let i = index"
+      class="cell"
+      (click)="cellClick(i)"
+    >
+      {{ cell }}
+    </div>
+  </div>
+
+  <!-- Botón de reinicio -->
+  <button (click)="resetGame()">Reiniciar Juego</button>
+</div>
