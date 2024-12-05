@@ -1,0 +1,13 @@
+<div class="container-board">
+  <div class="status" *ngIf="winner">¡{{ winner }} es el ganador!</div>
+  <div class="status" *ngIf="isDraw()">¡Empate!</div>
+  <div class="board">
+    <app-cell
+      *ngFor="let cell of cells; let i = index"
+      [value]="cell"
+      (click)="makeMove(i)"
+    >
+    </app-cell>
+  </div>
+  <button class="reset-button" (click)="resetGame()">Reiniciar</button>
+</div>

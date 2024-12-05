@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { CalculatorComponent } from './calculator/calculator.component';
-import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
+import { HomepageComponent } from './modules/home/pages/home-page/home-page.component';
+
 
 const routes: Routes = [
-  {path:'',redirectTo:'homepage', pathMatch:'full'},
-  {path:'homepage',component:HomepageComponent,},
-  {path:'calc',component:CalculatorComponent,},
-  {path:'tictactoe',component:TicTacToeComponent,},
+  {
+    path:'auth',     
+    loadChildren:()=> import('./modules/auth/auth.module').then(m=>m.AuthModule)
+  },
+  {
+    path:'homepage',
+    component:HomepageComponent,
+    loadChildren:()=> import('./modules/home/home.module').then(m=>m.HomeModule),
+  },
+  {
+    path:'**', 
+    redirectTo:'homepage'
+  },
 ];
 
 @NgModule({

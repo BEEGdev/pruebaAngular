@@ -1,0 +1,9 @@
+.home-wrapper {
+    margin: 0 0 0 17.5rem;
+    /* background: rgb(23, 23, 26); */
+    min-height: 100vh;
+}
+
+.home-wrapper h2 {
+    text-align: center;
+}

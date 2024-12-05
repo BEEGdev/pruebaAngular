@@ -1,0 +1,9 @@
+<div class="side-bar">
+  <ul class="side-bar__list">
+    <li [routerLink]="item.router" *ngFor="let item of mainMenu">
+      <div class="list-wrapper-item">
+        <span class="side-bar__list list-label">{{ item.title }}</span>
+      </div>
+    </li>
+  </ul>
+</div>
