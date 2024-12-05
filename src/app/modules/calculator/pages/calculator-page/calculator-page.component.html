@@ -1,1 +1,11 @@
-<p>calculator-page works!</p>
+<div class="calculator">
+  <app-display [value]="displayValue"></app-display>
+  <div class="buttons">
+    <app-button
+      *ngFor="let button of buttons"
+      [label]="button"
+      (clicked)="onButtonClick($event)"
+    >
+    </app-button>
+  </div>
+</div>

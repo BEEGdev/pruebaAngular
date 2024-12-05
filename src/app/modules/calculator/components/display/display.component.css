@@ -1,0 +1,11 @@
+.display {
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+  }
+  
